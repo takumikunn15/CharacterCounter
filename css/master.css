@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -40,4 +41,14 @@ body header .container .header-right a {
 
 body header .container .header-right a:hover {
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+body main #inpt {
+  /*ボーダー*/
+  height: 50px;
+  /*フォントサイズ*/
+  border: 1px solid #999999;
+  text-align: center;
+  /*  padding: 2px; /*パディング*/
+  font-size: 16px;
 }
