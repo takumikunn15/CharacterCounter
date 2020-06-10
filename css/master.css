@@ -45,7 +45,7 @@ body header .container .header-right a:hover {
 
 body main #inpt {
   /*ボーダー*/
-  height: 50px;
+  height: 300px;
   /*フォントサイズ*/
   border: 1px solid #999999;
   text-align: center;
