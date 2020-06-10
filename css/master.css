@@ -52,3 +52,12 @@ body main #inpt {
   /*  padding: 2px; /*パディング*/
   font-size: 16px;
 }
+
+body main .container {
+  margin: 0 auto;
+  width: 50%;
+}
+
+body main .container input {
+  width: 100%;
+}

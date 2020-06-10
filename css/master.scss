@@ -59,5 +59,13 @@ body {
       text-align: center; /*  padding: 2px; /*パディング*/
       font-size: 16px;
     }
+    .container {
+      // display: inline-block;
+      margin: 0 auto;
+      width: 50%;
+      input {
+        width: 100%;
+      }
+    }
   }
 }
