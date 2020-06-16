@@ -69,8 +69,12 @@ body {
       margin: 0 auto;
       width: 50%;
 
-      input {
-        width: 100%;
+      label {
+        float: left;
+      }
+
+      #in-max {
+        width: 30%;
       }
     }
   }

@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>文字数カウンター</title>
   <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
-  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/master.min.css">
   <script src="script/counter.js" defer="defer"></script>
 </head>
 
@@ -24,8 +24,11 @@
   </header>
   <main>
     <div class="container">
-      <textarea id="inpt" name="name" rows="8" cols="80" placeholder="ここに何か入力すると、その長さが分かります。"></textarea>
-      <p id="log">合計 0 文字(スペース込み)</p>
+      <label for="name">目標字数:</label>
+      <p id="logMax">あと 0 文字(スペース無し)</p>
+      <input type="tel" name="maxlength" id="in-max" maxlength="10" />
+      <textarea id="inpt" name="main" rows="8" cols="80" placeholder="ここに何か入力すると、その長さが分かります。"></textarea>
+      <p id="log1">合計 0 文字(スペース込み)</p>
       <p id="log2">合計 0 文字(スペース無し)</p>
       <p id="log3">スペース 0 文字</p>
       <p id="log4">改行 0 回</p>
