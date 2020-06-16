@@ -22,6 +22,9 @@ body header {
     body header .container .header-left {
       float: left;
       font-size: 30px; }
+    @media screen and (orientation: portrait) {
+      body header .container .header-right {
+        visibility: hidden; } }
     body header .container .header-right a {
       display: inline-block;
       float: right;
@@ -48,6 +51,11 @@ body main #inpt {
 body main .container {
   margin: 0 auto;
   width: 50%; }
+  @media screen and (orientation: portrait) {
+    body main .container {
+      width: 70%; }
+      body main .container #in-max {
+        width: 50%; } }
   body main .container label {
     float: left; }
   body main .container #in-max {
