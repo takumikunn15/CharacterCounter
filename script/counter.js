@@ -1,6 +1,6 @@
 let textarea = document.querySelector("textarea");
 let inMax = document.querySelector("#in-max");
-let logMax = document.getElementById("logMax");
+let logMaxSp = document.getElementById("logMaxSp");
 let log1 = document.getElementById("log1");
 let log2 = document.getElementById("log2");
 let log3 = document.getElementById("log3");
@@ -21,5 +21,5 @@ function refreshNeko(e) {
 
   document.getElementById("in-max").value = inMax.value.replace(/[^0-9]+/i, '');
   let moreLetter = inMax.value - chara;
-  logMax.textContent = `あと ${moreLetter} 文字`;
+  logMaxSp.textContent = moreLetter;
 }

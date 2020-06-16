@@ -63,33 +63,44 @@ body {
   main {
     .container {
       margin: 0 auto;
-      width: 50%;
+      width: 60%;
       font-weight: 400;
       font-style: normal;
       font-family: tbudrgothic-std, sans-serif;
 
-      #in-max {
-        padding: 10px;
-        width: 100%;
-        border: solid 3px #ccc;
-        border-radius: 5px;
-        color: #aaa;
-        // margin: 0 auto;
-        text-align: center;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 1.3em;
-        font-family: tbudrgothic-std, sans-serif;
-      }
-      @media screen and (orientation: portrait) {
-        width: 70%;
-      }
-      #logMax {
-        text-align: center;
-      }
-      #inpt {
+      .goals {
         margin-top: 20px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+
+        #in-max {
+          float: right;
+          margin-right: 0px;
+          padding: 10px;
+          // width: 100%;
+          border: solid 3px #ccc;
+          border-radius: 5px;
+          color: #222;
+          text-align: center;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 1.3em;
+          font-family: tbudrgothic-std, sans-serif;
+        }
+        @media screen and (orientation: portrait) {
+          width: 70%;
+        }
+
+        #logMax {
+          text-align: center;
+          font-size: 2em;
+        }
+        #logMaxSp {
+          font-size: 1em;
+        }
+      }
+
+      #inpt {
         padding: 10px;
         width: 100%;
         height: 300px;
@@ -104,10 +115,10 @@ body {
       }
 
       .area-container {
-        margin-top: -13em;
-        margin-left: 1.2em;
-        color: #949494;
-        font-size: 0.5em;
+        // margin-top: -13em;
+        // margin-left: 1.2em;
+        color: #696868;
+        font-size: 0.8em;
       }
     }
   }
