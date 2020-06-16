@@ -21,5 +21,5 @@ function refreshNeko(e) {
 
   document.getElementById("in-max").value = inMax.value.replace(/[^0-9]+/i, '');
   let moreLetter = inMax.value - chara;
-  logMax.textContent = `あと ${moreLetter} 文字(スペース無し)`;
+  logMax.textContent = `あと ${moreLetter} 文字`;
 }

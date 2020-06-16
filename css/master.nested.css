@@ -61,6 +61,8 @@ body main .container {
   @media screen and (orientation: portrait) {
     body main .container {
       width: 70%; } }
+  body main .container #logMax {
+    text-align: center; }
   body main .container #inpt {
     margin-top: 20px;
     margin-bottom: 10px;
@@ -80,5 +82,3 @@ body main .container {
     margin-left: 1.2em;
     color: #949494;
     font-size: 0.5em; }
-  body main .container label {
-    float: left; }

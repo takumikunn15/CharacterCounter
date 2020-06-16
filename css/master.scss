@@ -84,7 +84,9 @@ body {
       @media screen and (orientation: portrait) {
         width: 70%;
       }
-
+      #logMax {
+        text-align: center;
+      }
       #inpt {
         margin-top: 20px;
         margin-bottom: 10px;
@@ -106,10 +108,6 @@ body {
         margin-left: 1.2em;
         color: #949494;
         font-size: 0.5em;
-      }
-
-      label {
-        float: left;
       }
     }
   }
