@@ -62,6 +62,7 @@ body {
 
   main {
     .container {
+      // display: flex;
       margin: 0 auto;
       width: 60%;
       font-weight: 400;
@@ -74,10 +75,9 @@ body {
         width: 100%;
 
         #in-max {
-          float: right;
-          margin-right: 0px;
+          float: left;
           padding: 10px;
-          // width: 100%;
+          width: 30%;
           border: solid 3px #ccc;
           border-radius: 5px;
           color: #222;
@@ -86,17 +86,31 @@ body {
           font-style: normal;
           font-size: 1.3em;
           font-family: tbudrgothic-std, sans-serif;
-        }
-        @media screen and (orientation: portrait) {
-          width: 70%;
+          @media screen and (orientation: portrait) {
+            width: 100%;
+          }
         }
 
         #logMax {
-          text-align: center;
+          margin: 0px;
+          text-align: right;
           font-size: 2em;
+          @media screen and (orientation: portrait) {
+            text-align: center;
+          }
         }
         #logMaxSp {
           font-size: 1em;
+        }
+        #logSum {
+          visibility: hidden;
+          margin-top: -1em;
+          margin-bottom: -1em;
+          color: #535353;
+          text-align: center;
+          @media screen and (orientation: portrait) {
+            visibility: visible;
+          }
         }
       }
 
@@ -113,7 +127,19 @@ body {
         font-size: 1.3em;
         font-family: tbudrgothic-std, sans-serif;
       }
-
+      #btn-wrapper {
+        display: flex;
+        // align-items: center;
+        justify-content: center;
+      }
+      #copy-btn {
+        width: 40%;
+        border: 2px solid #777;
+        border-radius: 5px;
+        @media screen and (orientation: portrait) {
+          width: 100%;
+        }
+      }
       .area-container {
         // margin-top: -13em;
         // margin-left: 1.2em;

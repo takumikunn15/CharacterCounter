@@ -52,9 +52,9 @@ body main .container {
     margin-bottom: 20px;
     width: 100%; }
     body main .container .goals #in-max {
-      float: right;
-      margin-right: 0px;
+      float: left;
       padding: 10px;
+      width: 30%;
       border: solid 3px #ccc;
       border-radius: 5px;
       color: #222;
@@ -63,14 +63,27 @@ body main .container {
       font-style: normal;
       font-size: 1.3em;
       font-family: tbudrgothic-std, sans-serif; }
-    @media screen and (orientation: portrait) {
-      body main .container .goals {
-        width: 70%; } }
+      @media screen and (orientation: portrait) {
+        body main .container .goals #in-max {
+          width: 100%; } }
     body main .container .goals #logMax {
-      text-align: center;
+      margin: 0px;
+      text-align: right;
       font-size: 2em; }
+      @media screen and (orientation: portrait) {
+        body main .container .goals #logMax {
+          text-align: center; } }
     body main .container .goals #logMaxSp {
       font-size: 1em; }
+    body main .container .goals #logSum {
+      visibility: hidden;
+      margin-top: -1em;
+      margin-bottom: -1em;
+      color: #535353;
+      text-align: center; }
+      @media screen and (orientation: portrait) {
+        body main .container .goals #logSum {
+          visibility: visible; } }
   body main .container #inpt {
     padding: 10px;
     width: 100%;
@@ -83,6 +96,16 @@ body main .container {
     font-style: normal;
     font-size: 1.3em;
     font-family: tbudrgothic-std, sans-serif; }
+  body main .container #btn-wrapper {
+    display: flex;
+    justify-content: center; }
+  body main .container #copy-btn {
+    width: 40%;
+    border: 2px solid #777;
+    border-radius: 5px; }
+    @media screen and (orientation: portrait) {
+      body main .container #copy-btn {
+        width: 100%; } }
   body main .container .area-container {
     color: #696868;
     font-size: 0.8em; }
