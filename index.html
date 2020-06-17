@@ -1,151 +1,76 @@
-@charset "UTF-8";
-$header-height: 70px;
+<!DOCTYPE html>
+<html lang="ja">
 
-* {
-  box-sizing: border-box;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>文字数カウンター</title>
+  <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+  <link rel="stylesheet" href="css/master.min.css">
+  <script src="script/counter.js" defer="defer"></script>
+  <script>
+    (function(d) {
+      var config = {
+          kitId: 'qsx3crj',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h = d.documentElement,
+        t = setTimeout(function() {
+          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function() {
+        a = this.readyState;
+        if (f || a && a != "complete" && a != "loaded") return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config)
+        } catch (e) {}
+      };
+      s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+</head>
 
-body {
-  header {
-    height: $header-height;
-    background-color: #656565;
-    color: #fff;
-    text-align: center;
+<body>
+  <header>
+    <div class="container">
+      <div class="header-left">
+        <p>文字数カウンター</p>
+      </div>
+      <div class="header-right">
+        <a href="https://github.com/takumikunn15/MultiColorConverter">GitHub</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="goals">
+        <input type="tel" name="maxlength" id="in-max" maxlength="10" placeholder="目標文字数" />
+        <p id="logMax">あと <span id="logMaxSp">0</span> 文字</p>
+        <p id="logSum">合計 0 文字</p>
+      </div>
+      <textarea id="inpt" name="main" rows="8" cols="80" placeholder="ここに何か入力すると、その長さが分かります。"></textarea>
+      <div id="btn-wrapper">
+        <button id="copy-btn" type="button" name="button">コピーする</button>
+      </div>
+      <div class="area-container">
+        <p id="log1">合計 0 文字(スペース込み)</p>
+        <p id="log2">合計 0 文字(スペース無し)</p>
+        <p id="log3">スペース 0 文字</p>
+        <p id="log4">改行 0 回</p>
+      </div>
+    </div>
+  </main>
+</body>
 
-    .container {
-      display: inline-block;
-      margin: 0 auto;
-      width: 80%;
-      height: $header-height;
-      line-height: $header-height;
-      // 選択不可にする
-
-      -ms-user-select: none;
-      /* IE 10+ */
-      -moz-user-select: -moz-none;
-      -khtml-user-select: none;
-      -webkit-user-select: none;
-      user-select: none;
-      //ここまで
-      .header-left {
-        float: left;
-        font-weight: 700;
-        font-style: normal;
-        font-size: 30px;
-        font-family: tbudrgothic-std, sans-serif;
-      }
-
-      .header-right {
-        @media screen and (orientation: portrait) {
-          visibility: hidden;
-        }
-
-        a {
-          display: inline-block;
-          float: right;
-          width: 160px;
-          background-color: rgba(#fff,.3);
-          color: #fff;
-          text-decoration: none;
-          font-weight: 400;
-          font-style: normal;
-          font-size: 22px;
-          font-family: tbudrgothic-std, sans-serif;
-
-          &:hover {
-            background-color: rgba(#fff,.5);
-          }
-        }
-      }
-    }
-  }
-
-  main {
-    .container {
-      // display: flex;
-      margin: 0 auto;
-      width: 60%;
-      font-weight: 400;
-      font-style: normal;
-      font-family: tbudrgothic-std, sans-serif;
-
-      .goals {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        width: 100%;
-
-        #in-max {
-          float: left;
-          padding: 10px;
-          width: 30%;
-          border: solid 3px #ccc;
-          border-radius: 5px;
-          color: #222;
-          text-align: center;
-          font-weight: 400;
-          font-style: normal;
-          font-size: 1.3em;
-          font-family: tbudrgothic-std, sans-serif;
-          @media screen and (orientation: portrait) {
-            width: 100%;
-          }
-        }
-
-        #logMax {
-          margin: 0px;
-          text-align: right;
-          font-size: 2em;
-          @media screen and (orientation: portrait) {
-            text-align: center;
-          }
-        }
-        #logMaxSp {
-          font-size: 1em;
-        }
-        #logSum {
-          visibility: hidden;
-          margin-top: -1em;
-          margin-bottom: -1em;
-          color: #535353;
-          text-align: center;
-          @media screen and (orientation: portrait) {
-            visibility: visible;
-          }
-        }
-      }
-
-      #inpt {
-        padding: 10px;
-        width: 100%;
-        height: 300px;
-        border: solid 3px #ccc;
-        border-radius: 5px;
-        color: #777;
-        text-align: left;
-        font-weight: 400px;
-        font-style: normal;
-        font-size: 1.3em;
-        font-family: tbudrgothic-std, sans-serif;
-      }
-      #btn-wrapper {
-        display: flex;
-        // align-items: center;
-        justify-content: center;
-      }
-      #copy-btn {
-        width: 40%;
-        border: 2px solid #777;
-        border-radius: 5px;
-        @media screen and (orientation: portrait) {
-          width: 100%;
-        }
-      }
-      .area-container {
-        // margin-top: -13em;
-        // margin-left: 1.2em;
-        color: #696868;
-        font-size: 0.8em;
-      }
-    }
-  }
-}
+</html>
