@@ -7,39 +7,60 @@ body header {
   color: #fff;
   text-align: center; }
   body header .container {
-    display: inline-block;
+    position: relative;
     margin: 0 auto;
-    width: 80%;
+    width: 98%;
     height: 70px;
     line-height: 70px;
-    -ms-user-select: none;
-    /* IE 10+ */
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;
     user-select: none; }
+    @media screen and (orientation: portrait) {
+      body header .container {
+        width: 80%; } }
     body header .container .header-left {
-      float: left;
+      position: absolute;
+      display: flex;
+      width: 100%;
       font-weight: 700;
       font-style: normal;
       font-size: 30px;
       font-family: tbudrgothic-std, sans-serif; }
-    @media screen and (orientation: portrait) {
-      body header .container .header-right {
-        visibility: hidden; } }
-    body header .container .header-right a {
-      display: inline-block;
-      float: right;
-      width: 160px;
-      background-color: rgba(255, 255, 255, 0.3);
-      color: #fff;
-      text-decoration: none;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 22px;
-      font-family: tbudrgothic-std, sans-serif; }
-      body header .container .header-right a:hover {
-        background-color: rgba(255, 255, 255, 0.5); }
+      body header .container .header-left p {
+        align-items: center;
+        justify-content: flex-end; }
+    body header .container .header-right {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin: 0 auto;
+      width: 100%; }
+      body header .container .header-right #pc {
+        width: 160px;
+        background-color: rgba(255, 255, 255, 0.3); }
+        @media screen and (orientation: portrait) {
+          body header .container .header-right #pc {
+            visibility: hidden; } }
+        body header .container .header-right #pc:hover {
+          background-color: rgba(255, 255, 255, 0.5); }
+        body header .container .header-right #pc a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 22px;
+          font-family: tbudrgothic-std, sans-serif; }
+      body header .container .header-right #phone img {
+        visibility: hidden;
+        float: right;
+        width: 55px;
+        height: 55px;
+        border-radius: 5px; }
+        @media screen and (orientation: portrait) {
+          body header .container .header-right #phone img {
+            visibility: visible; } }
 
 body main .container {
   margin: 0 auto;
