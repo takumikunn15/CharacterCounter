@@ -23,3 +23,14 @@ function refreshNeko(e) {
   let moreLetter = inMax.value - chara;
   logMaxSp.textContent = moreLetter;
 }
+
+function copyBtn() {
+	navigator.clipboard.writeText(textarea.value).then(
+		function () {
+			// console.log("成功");
+		},
+		function () {
+			// console.log("失敗");
+		}
+	);
+}

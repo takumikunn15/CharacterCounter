@@ -62,12 +62,14 @@ body {
 
   main {
     .container {
-      // display: flex;
       margin: 0 auto;
       width: 60%;
       font-weight: 400;
       font-style: normal;
       font-family: tbudrgothic-std, sans-serif;
+      @media screen and (orientation: portrait) {
+        width: 80%;
+      }
 
       .goals {
         margin-top: 20px;
@@ -92,16 +94,18 @@ body {
         }
 
         #logMax {
-          margin: 0px;
+          margin: 0;
           text-align: right;
           font-size: 2em;
           @media screen and (orientation: portrait) {
             text-align: center;
           }
         }
+
         #logMaxSp {
           font-size: 1em;
         }
+
         #logSum {
           visibility: hidden;
           margin-top: -1em;
@@ -127,11 +131,13 @@ body {
         font-size: 1.3em;
         font-family: tbudrgothic-std, sans-serif;
       }
+
       #btn-wrapper {
         display: flex;
         // align-items: center;
         justify-content: center;
       }
+
       #copy-btn {
         width: 40%;
         border: 2px solid #777;
@@ -140,6 +146,7 @@ body {
           width: 100%;
         }
       }
+
       .area-container {
         // margin-top: -13em;
         // margin-left: 1.2em;
